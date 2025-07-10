@@ -39,53 +39,38 @@ Set your environment variable:
 
 Linux / macOS
 
-bash
-Copy
-Edit
+
 export OPENAI_API_KEY=sk-xxxxx
 Windows (PowerShell)
 
-powershell
-Copy
-Edit
 $env:OPENAI_API_KEY="sk-xxxxx"
 🧪 Run Tests
 To ensure everything is working, run:
 
-bash
-Copy
-Edit
+
 ./gradlew test
 This will run the unit test located in:
 
-swift
-Copy
-Edit
+
 src/test/java/com/smartchat/controller/ChatMessageControllerTest.java
 ⚙️ Build the Project
 To compile the application:
 
-bash
-Copy
-Edit
+
 ./gradlew build
 🐳 Run with Docker Compose
 The project includes a Dockerfile and docker-compose.yml.
 
 To build and run the container:
 
-bash
-Copy
-Edit
+
 docker-compose up --build
 Make sure the OPENAI_API_KEY environment variable is set before running Docker.
 
 🧪 Test the API
 Once running locally, test with curl:
 
-bash
-Copy
-Edit
+
 curl -X POST http://localhost:8080/api/chat \
   -H "Content-Type: application/json" \
   -d '{
@@ -100,14 +85,11 @@ curl -X POST http://localhost:8080/api/chat \
   }'
 Expected response:
 
-json
-Copy
-Edit
+
 "The capital of France is Paris."
+
 📁 Project Structure
-css
-Copy
-Edit
+
 src/main/java/com/smartchat/
 ├── SmartChatApplication.java
 ├── controller/ChatMessageController.java
