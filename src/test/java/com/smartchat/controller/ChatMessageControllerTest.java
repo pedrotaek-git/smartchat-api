@@ -24,25 +24,25 @@ public class ChatMessageControllerTest {
 
     @Test
     void testAsk() {
-        // Cria a requisição com model, mensagens e temperatura
+        // Creates the request with model, messages, and temperature
         ChatCompletionRequest request = new ChatCompletionRequest(
                 "mistralai/mixtral-8x7b", // ✅ Modelo válido do OpenRouter
                 List.of(new ChatCompletionRequest.Message("user", "Hello, who are you?")),
                 0.7
         );
 
-        // Cria a resposta simulada
+        // Creates the mocked response
         ChatCompletionResponse response = new ChatCompletionResponse();
         ChatCompletionResponse.Choice choice = new ChatCompletionResponse.Choice();
         choice.setIndex(0);
         choice.setMessage(new ChatCompletionRequest.Message("assistant", "Hi!"));
         response.setChoices(List.of(choice));
 
-        // Mocka o comportamento do ChatService
+        // Mocks the behavior of ChatService
         Mockito.when(chatService.sendMessage(Mockito.any()))
                 .thenReturn(Mono.just(response));
 
-        // Executa a requisição e valida a resposta
+        // Executes the request and validates the response
         webTestClient.post()
                 .uri("/api/chat")
                 .bodyValue(request)
