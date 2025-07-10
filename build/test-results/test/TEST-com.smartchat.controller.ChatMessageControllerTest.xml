@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.smartchat.controller.ChatMessageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-10T10:03:15" hostname="pneto" time="0.226">
+<testsuite name="com.smartchat.controller.ChatMessageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-10T20:21:13" hostname="pneto" time="0.228">
   <properties/>
-  <testcase name="testAsk()" classname="com.smartchat.controller.ChatMessageControllerTest" time="0.226"/>
-  <system-out><![CDATA[07:03:13.659 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.smartchat.controller.ChatMessageControllerTest]: ChatMessageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-07:03:13.786 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.smartchat.SmartChatApplication for test class com.smartchat.controller.ChatMessageControllerTest
+  <testcase name="testAsk()" classname="com.smartchat.controller.ChatMessageControllerTest" time="0.228"/>
+  <system-out><![CDATA[17:21:11.718 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.smartchat.controller.ChatMessageControllerTest]: ChatMessageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:21:11.826 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.smartchat.SmartChatApplication for test class com.smartchat.controller.ChatMessageControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,9 +13,9 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2025-07-10T07:03:14.107-03:00  INFO 85134 --- [    Test worker] c.s.c.ChatMessageControllerTest          : Starting ChatMessageControllerTest using Java 17.0.15 with PID 85134 (started by pedrotaek in /home/pedrotaek/dev/estudos/smartchat)
-2025-07-10T07:03:14.109-03:00  INFO 85134 --- [    Test worker] c.s.c.ChatMessageControllerTest          : No active profile set, falling back to 1 default profile: "default"
-2025-07-10T07:03:15.915-03:00  INFO 85134 --- [    Test worker] c.s.c.ChatMessageControllerTest          : Started ChatMessageControllerTest in 2.067 seconds (process running for 3.018)
+2025-07-10T17:21:12.147-03:00  INFO 197879 --- [    Test worker] c.s.c.ChatMessageControllerTest          : Starting ChatMessageControllerTest using Java 17.0.15 with PID 197879 (started by pedrotaek in /home/pedrotaek/dev/estudos/smartchat)
+2025-07-10T17:21:12.148-03:00  INFO 197879 --- [    Test worker] c.s.c.ChatMessageControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-07-10T17:21:13.782-03:00  INFO 197879 --- [    Test worker] c.s.c.ChatMessageControllerTest          : Started ChatMessageControllerTest in 1.905 seconds (process running for 2.719)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

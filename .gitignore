@@ -1,1 +1,4 @@
 .idea/vcs.xml
+.gradle
+build/
+
