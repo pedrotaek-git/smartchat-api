@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  chat-api:
+    build: .
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+    restart: unless-stopped
