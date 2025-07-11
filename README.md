@@ -21,58 +21,94 @@ This project is built using Java 17, Spring Boot 3.2, and WebClient (reactive) t
 
 ```bash
 git clone https://github.com/pedrotaek-git/smartchat-api
+```
 
-🧠 Import into IntelliJ IDEA
-Open IntelliJ IDEA
+---
 
-Select Open and choose the project directory
+## 🧠 Import into IntelliJ IDEA
 
-IntelliJ will automatically detect the build.gradle file
+- Open IntelliJ IDEA
+- Select **Open** and choose the project directory
+- IntelliJ will automatically detect the `build.gradle` file
+- Wait for Gradle to finish syncing
 
-Wait for Gradle to finish syncing
+---
 
-🔐 Environment Configuration
-The project requires an OpenRouter API Key. You can create a free account and generate the key at https://openrouter.ai.
+## 🔐 Environment Configuration
 
-Set your environment variable:
+The project requires an OpenRouter API Key. You can create a free account and generate the key at:  
+👉 https://openrouter.ai/account/keys
 
-Linux / macOS
+### Option 1 — Export variable in your system:
 
-
+#### Linux / macOS:
+```bash
 export OPENAI_API_KEY=sk-xxxxx
-Windows (PowerShell)
+```
 
+#### Windows (PowerShell):
+```powershell
 $env:OPENAI_API_KEY="sk-xxxxx"
-🧪 Run Tests
+```
+
+### Option 2 — Use a `.env` file (recommended for quick validation)
+
+You can also create a `.env` file in the **root directory of the project** with the following content:
+
+```
+OPENAI_API_KEY=sk-xxxxx
+```
+
+This allows you to test locally without modifying system environment variables.
+
+---
+
+## 🧪 Run Tests
+
 To ensure everything is working, run:
 
-
+```bash
 ./gradlew test
-This will run the unit test located in:
+```
 
+This will execute the unit test located at:
 
+```
 src/test/java/com/smartchat/controller/ChatMessageControllerTest.java
-⚙️ Build the Project
+```
+
+---
+
+## ⚙️ Build the Project
+
 To compile the application:
 
-
+```bash
 ./gradlew build
-🐳 Run with Docker Compose
-The project includes a Dockerfile and docker-compose.yml.
+```
+
+---
+
+## 🐳 Run with Docker Compose
+
+The project includes a `Dockerfile` and `docker-compose.yml`.
 
 To build and run the container:
 
-
+```bash
 docker-compose up --build
-Make sure the OPENAI_API_KEY environment variable is set before running Docker.
+```
 
-🧪 Test the API
-Once running locally, test with curl:
+Make sure the `OPENAI_API_KEY` is set as an environment variable or in your `.env` file before running Docker.
 
+---
 
-curl -X POST http://localhost:8080/api/chat \
-  -H "Content-Type: application/json" \
-  -d '{
+## 🧪 Test the API
+
+Once the application is running locally, test the endpoint using `curl`:
+
+```bash
+curl -X POST http://localhost:8080/api/chat   -H "Content-Type: application/json"   -d '{
     "model": "mistralai/mistral-7b-instruct",
     "messages": [
       {
@@ -82,19 +118,28 @@ curl -X POST http://localhost:8080/api/chat \
     ],
     "temperature": 0.7
   }'
-Expected response:
+```
 
+✅ Expected response:
 
+```json
 "The capital of France is Paris."
+```
 
-📁 Project Structure
+---
 
+## 📁 Project Structure
+
+```
 src/main/java/com/smartchat/
 ├── SmartChatApplication.java
-├── controller/ChatMessageController.java
+├── controller/
+│   └── ChatMessageController.java
 ├── dto/
 │   ├── ChatCompletionRequest.java
 │   ├── ChatCompletionResponse.java
 ├── service/
 │   ├── ChatService.java
-│   └── impl/ChatServiceImpl.java
+│   └── impl/
+│       └── ChatServiceImpl.java
+```
