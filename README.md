@@ -20,8 +20,7 @@ This project is built using Java 17, Spring Boot 3.2, and WebClient (reactive) t
 ## 📦 Clone and Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/smartchat-api.git
-cd smartchat-api
+git clone https://github.com/pedrotaek-git/smartchat-api
 
 🧠 Import into IntelliJ IDEA
 Open IntelliJ IDEA
